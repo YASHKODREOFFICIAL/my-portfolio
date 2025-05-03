@@ -1,0 +1,92 @@
+/* RGB Border Animation */
+@keyframes rgbBorder {
+  0% {
+    background-image:
+      linear-gradient(#000, #000),
+      linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+  }
+  50% {
+    background-image:
+      linear-gradient(#000, #000),
+      linear-gradient(45deg, violet, blue, cyan, green, yellow, orange, red, violet);
+  }
+  100% {
+    background-image:
+      linear-gradient(#000, #000),
+      linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+  }
+}
+
+/* Education Section Container */
+.education-section {
+  background-image: 
+    linear-gradient(#000, #000),
+    linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red) !important;
+}
+
+
+/* Section Header */
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Buttons */
+.education-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.education-button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+
+  background-image:
+    linear-gradient(#000, #000),
+    linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  transition: transform 0.3s ease, background-image 0.5s ease;
+}
+
+.education-button:hover {
+  transform: scale(1.05);
+}
+
+.education-button.active {
+  background: #111 !important;
+  border: 2px solid #333;
+  background-image: none;
+}
+
+/* Education Info Box */
+.education-info {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  line-height: 1.7;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.education-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.education-info p {
+  font-size: 1rem;
+  margin: 5px 0;
+}

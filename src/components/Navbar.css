@@ -1,0 +1,69 @@
+/* make sure Bootstrap CSS is imported in your App.js or index.js */
+.custom-navbar {
+    background-color: #111;        /* dark fill */
+    border-radius: 20px;           /* rounded corners */
+    border: 3px solid transparent; /* shell for gradient */
+    margin: 20px;                  /* spacing around */
+    padding: 0.5rem 1rem;
+    /* two-layer background: inner fill + animated border */
+    background-image:
+      linear-gradient(#111, #111),
+      linear-gradient(
+        45deg,
+        red, orange, yellow, green, cyan, blue, violet, red
+      );
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    animation: rgbBorder 8s linear infinite;
+  }
+  
+  .custom-navbar .nav-link,
+  .custom-navbar .navbar-brand {
+    color: #fff !important;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .custom-navbar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* moving RGB border animation */
+  @keyframes rgbBorder {
+    0% {
+      background-image:
+        linear-gradient(#111, #111),
+        linear-gradient(
+          45deg,
+          red, orange, yellow, green, cyan, blue, violet, red
+        );
+    }
+    50% {
+      background-image:
+        linear-gradient(#111, #111),
+        linear-gradient(
+          45deg,
+          violet, blue, cyan, green, yellow, orange, red, violet
+        );
+    }
+    100% {
+      background-image:
+        linear-gradient(#111, #111),
+        linear-gradient(
+          45deg,
+          red, orange, yellow, green, cyan, blue, violet, red
+        );
+    }
+  }
+  
+  /* ensure toggler icon is visible on dark bg */
+  .custom-navbar .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .custom-navbar .navbar-toggler-icon {
+    filter: invert(1);
+  }
+  

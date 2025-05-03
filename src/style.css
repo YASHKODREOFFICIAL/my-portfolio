@@ -1,0 +1,21 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+/* initial hidden state */
+.appear {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* revealed state */
+.appear.inview {
+  opacity: 1;
+  transform: translateY(0);
+}

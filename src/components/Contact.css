@@ -1,0 +1,128 @@
+.contact-section {
+    margin: 40px 20px;
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid transparent;
+    overflow: hidden;
+    background-image:
+      linear-gradient(#000, #000),
+      linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    animation: rgbBorder 8s linear infinite;
+    color: #fff;
+  }
+  
+  .section-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  /* Left Section: Social Icons + Email */
+  .contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.5rem;
+    align-items: center;
+  }
+  
+  .contact-left a {
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .contact-left a:hover {
+    transform: scale(1.2);
+    color: #00ffe5;
+  }
+  
+  .contact-email {
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+  
+  /* Right Section: Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-size: 1.125rem;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #444;
+    background-color: #111;
+    color: #fff;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #ff9d00;
+    outline: none;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 1.125rem;
+    background-color: #ff9d00;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #ff7a00;
+  }
+  
+  /* RGB Border Animation */
+  @keyframes rgbBorder {
+    0% {
+      background-image:
+        linear-gradient(#000, #000),
+        linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+    }
+    50% {
+      background-image:
+        linear-gradient(#000, #000),
+        linear-gradient(45deg, violet, blue, cyan, green, yellow, orange, red, violet);
+    }
+    100% {
+      background-image:
+        linear-gradient(#000, #000),
+        linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+    }
+  }
+  

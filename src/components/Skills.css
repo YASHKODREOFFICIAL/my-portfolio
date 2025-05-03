@@ -1,0 +1,75 @@
+.skills-section {
+  position: relative;
+  margin: 40px 20px;
+  padding: 30px;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(#000, #000),
+    linear-gradient(
+      45deg,
+      red, orange, yellow, green, cyan, blue, violet, red
+    );
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  animation: rgbBorder 8s linear infinite;
+  color: #fff;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.skills-list a {
+  background-color: #111;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.skills-list a:hover {
+  transform: translateY(-5px);
+}
+
+.skill-info {
+  margin-top: 30px;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+  text-align: center;
+}
+
+@keyframes rgbBorder {
+  0% {
+    background-image:
+      linear-gradient(#000, #000),
+      linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+  }
+  50% {
+    background-image:
+      linear-gradient(#000, #000),
+      linear-gradient(45deg, violet, blue, cyan, green, yellow, orange, red, violet);
+  }
+  100% {
+    background-image:
+      linear-gradient(#000, #000),
+      linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+  }
+}

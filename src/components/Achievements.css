@@ -1,0 +1,67 @@
+/* Achievements Section */
+.achievements-section {
+    position: relative;
+    margin: 40px 20px;
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid transparent;
+    overflow: hidden;
+  
+    /* Two-layer background:
+       1) solid dark fill (padding-box)
+       2) animated RGB gradient border (border-box) */
+    background-image:
+      linear-gradient(#000, #000),
+      linear-gradient(
+        45deg,
+        red, orange, yellow, green, cyan, blue, violet, red
+      );
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    animation: rgbBorder 8s linear infinite;
+    color: #fff;
+  }
+  
+  .section-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .achievements-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .achievement-item {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .achievement-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* RGB border animation */
+  @keyframes rgbBorder {
+    0% {
+      background-image:
+        linear-gradient(#000, #000),
+        linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+    }
+    50% {
+      background-image:
+        linear-gradient(#000, #000),
+        linear-gradient(45deg, violet, blue, cyan, green, yellow, orange, red, violet);
+    }
+    100% {
+      background-image:
+        linear-gradient(#000, #000),
+        linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+    }
+  }
+  

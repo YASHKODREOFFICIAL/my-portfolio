@@ -1,0 +1,126 @@
+/* General body styles */
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Container holding the info and image boxes */
+  .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+    min-height: 100vh;
+  }
+  
+  /* Shared box styles */
+  .info-box,
+  .image-box {
+    position: relative;
+    flex: 1 1 400px;
+    max-width: 500px;
+    padding: 30px;
+    overflow: hidden;
+    border-radius: 20px;             /* Rounded corners */
+    border: 3px solid transparent;   /* Transparent “shell” to hold the gradient */
+  
+    /* Layered backgrounds: 
+       1) Solid dark fill (padding-box) 
+       2) Animated RGB gradient border (border-box) */
+    background-image:
+      /* dark inner fill */ linear-gradient(#111, #111),
+      /* animated rainbow border */ linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    animation: rgbBorder 8s linear infinite;
+    transition: background 0.3s ease;
+  }
+  
+  /* Image fits its box with the same rounding */
+  .natural-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 17px; /* slightly less than box so it doesn't overlap the border */
+  }
+  
+  /* RGB border animation */
+  @keyframes rgbBorder {
+    0%   { background-image:
+              linear-gradient(#111, #111),
+              linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+    }
+    50%  { background-image:
+              linear-gradient(#111, #111),
+              linear-gradient(45deg, violet, blue, cyan, green, yellow, orange, red, violet);
+    }
+    100% { background-image:
+              linear-gradient(#111, #111),
+              linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .info-box,
+    .image-box {
+      max-width: 90%;
+    }
+  }
+  /* existing styles… */
+
+.info-box {
+    /* all your previous .info-box rules… */
+    
+    /* new: center text horizontally and vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    /* horizontally center everything */
+    text-align: center;     /* center the text inside <h2> and <p> */
+  }
+  
+  /* the rest of your CSS (no changes to .image-box) */
+  
+  .resume-button {
+    display: inline-block;
+    padding: 1em 2.5em;                     /* larger button size */
+    font-size: 1.125rem;                    /* larger text */
+    font-weight: 600;                       /* bolder for contrast */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: #fff !important;                 /* force white text */
+    border: 4px solid transparent;          /* slightly thicker border shell */
+    border-radius: 12px;                    /* keep rounded corners */
+    position: relative;
+    overflow: hidden;
+    background-image:
+      /* dark inner fill */ linear-gradient(100deg, #000, #000),
+      /* RGB gradient for border */ linear-gradient(
+        45deg,
+        red, orange, yellow, green, cyan, blue, violet, red
+      );
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    transition:
+      background-image 0.4s ease,
+      border-color 0.4s ease,
+      color 0.4s ease;
+  }
+  
+  /* Hover: fill with RGB, border solid black, keep text visible */
+  .resume-button:hover {
+   
+    border-color: #000;
+    color: #ffffff !important;                 /* black text for contrast on light fill */
+  }
+  
