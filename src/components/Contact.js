@@ -2,57 +2,30 @@ import React, { useState } from "react";
 import "./Contact.css";
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Submitted:", formData);
+    console.log("Form submitted:", formData);
     setFormData({ name: "", email: "", message: "" });
   };
 
   return (
-    <section className="contact-section">
-      <h2 className="section-heading">Contact Me</h2>
+    <section className="contact-section" id="contact">
+      <h1 className="section-header">Contact</h1>
+      <div className="contact-wrapper">
 
-      <div className="contact-container">
-        <div className="contact-left">
-          <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer">
-            <i className="fab fa-whatsapp"></i>
-          </a>
-          <a href="https://facebook.com" target="_blank" rel="noreferrer">
-            <i className="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-            <i className="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="https://github.com" target="_blank" rel="noreferrer">
-            <i className="fab fa-github"></i>
-          </a>
-
-          <p className="contact-email">youremail@example.com</p>
-        </div>
-
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="form-horizontal" onSubmit={handleSubmit}>
           <div className="form-group">
-            <label>Name:</label>
             <input
               type="text"
               name="name"
+              placeholder="NAME"
               value={formData.name}
               onChange={handleChange}
               required
@@ -60,28 +33,51 @@ function Contact() {
           </div>
 
           <div className="form-group">
-            <label>Email:</label>
             <input
               type="email"
               name="email"
+              placeholder="EMAIL"
               value={formData.email}
               onChange={handleChange}
               required
             />
           </div>
 
-          <div className="form-group">
-            <label>Message:</label>
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-          </div>
+          <textarea
+            rows="10"
+            placeholder="MESSAGE"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
 
-          <button type="submit" className="submit-button">Submit</button>
+          <button className="send-button" type="submit">
+            <div className="alt-send-button">
+              <i className="fa fa-paper-plane"></i><span className="send-text">SEND</span>
+            </div>
+          </button>
         </form>
+
+        <div className="direct-contact-container">
+          <ul className="contact-list">
+            <li><i className="fa fa-map-marker"></i><span className="contact-text">City, State</span></li>
+            <li><i className="fa fa-phone"></i><span className="contact-text"><a href="tel:+911234567890">(123) 456-7890</a></span></li>
+            <li><i className="fa fa-envelope"></i><span className="contact-text"><a href="mailto:email@example.com">email@example.com</a></span></li>
+          </ul>
+
+          <hr />
+          <ul className="social-media-list">
+            <li><a href="#"><i className="fa fa-github"></i></a></li>
+            <li><a href="#"><i className="fa fa-codepen"></i></a></li>
+            <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i className="fa fa-instagram"></i></a></li>
+          </ul>
+          <hr />
+
+          <div className="copyright">© ALL OF THE RIGHTS RESERVED</div>
+        </div>
+
       </div>
     </section>
   );
