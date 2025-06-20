@@ -12,7 +12,7 @@ export default function Navbar() {
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navContent"
+          data-bs-target=""
           aria-controls="navContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
