@@ -68,10 +68,10 @@ function Contact() {
 
           <hr />
           <ul className="social-media-list">
-            <li><a><i className="fa fa-github"></i></a></li>
-            <li><a><i className="fa fa-codepen"></i></a></li>
-            <li><a><i className="fa fa-twitter"></i></a></li>
-            <li><a><i className="fa fa-instagram"></i></a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-github"></i></a></li>
+            <li><a href="https://codepen.io" target="_blank" rel="noopener noreferrer"><i className="fa fa-codepen"></i></a></li>
+            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter"></i></a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram"></i></a></li>
           </ul>
           <hr />
 
