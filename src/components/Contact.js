@@ -68,10 +68,10 @@ function Contact() {
 
           <hr />
           <ul className="social-media-list">
-            <li><a href=""><i className="fa fa-github"></i></a></li>
-            <li><a href=""><i className="fa fa-codepen"></i></a></li>
-            <li><a href=""><i className="fa fa-twitter"></i></a></li>
-            <li><a href=""><i className="fa fa-instagram"></i></a></li>
+            <li><a><i className="fa fa-github"></i></a></li>
+            <li><a><i className="fa fa-codepen"></i></a></li>
+            <li><a><i className="fa fa-twitter"></i></a></li>
+            <li><a><i className="fa fa-instagram"></i></a></li>
           </ul>
           <hr />
 
