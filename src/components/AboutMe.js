@@ -1,7 +1,7 @@
 import React from "react";
 import "./AboutMe.css";
 import myImage from "../assets/image2.png";  // Update path to your image
-import myresume from "../assets/dummy.pdf";  // Update path to your resume
+import myresume from "../assets/dummy1.pdf";  // Update path to your resume
 
 const AboutMe = () => {
   return (
